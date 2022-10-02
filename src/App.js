@@ -14,6 +14,7 @@ import Reviews from './Pages/Reviews';
 import Support from './Pages/Support';
 import NavBar from './Components/NavBar';
 
+
 function App() {
   return (
     <BrowserRouter>

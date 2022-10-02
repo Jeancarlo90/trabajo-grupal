@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "reviews":"This computer is absoluty insane!Once again if you want to check out this brand new Redux faming PC-its an absolute super computer.Highly.highly recommend it.",
+        "influencer": "MR Top 5.",
+        "gratitude":"Thanks to @MRTop5 for showing off the unboxing of the #BuildRedux PC! Chexk out his video to see his PC and setup!",
+        "urlVideo":"https://www.youtube.com/embed/4vpPJb392Vg",
+        "urlLogo":"https://yt3.ggpht.com/ytc/AMLnZu-Cvv9e9wnEq0vkS5ASLLypIAEn6pqz6naYeenlgA=s88-c-k-c0x00ffffff-no-rj",
+        "color":"#FF0000"
+    },
+    {
+        "id":2,
+        "reviews":"You basically just pick whicth games you play, which performance you want and it will suggest a rig for you.They make things much,much simpler and again for only $75 bucks?Okay!",
+        "influencer": "Short Circuit",
+        "gratitude":"Thanks for the awesome review @shortCircuit",
+        "urlVideo":"https://www.youtube.com/embed/UhO7MLntkDE",
+        "urlLogo":"https://yt3.ggpht.com/ytc/AMLnZu_-v2bzQCks3k_MHJNya5J_TSVpMevRw2-axtLX=s88-c-k-c0x00ffffff-no-rj",
+        "color":"#800080"
+    }
+]
