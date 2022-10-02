@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "img":"https://m.media-amazon.com/images/I/61m8ZyGvL2L._SX679_.jpg",
+        "title": "Headset",
+        "currency": "$",
+        "price": 25
+    },
+    {
+        "id":2,
+        "img":"https://i.linio.com/p/d00d29436138fc1daba91a1b11af5e90-product.webp",
+        "title": "Mouse and Keyboards",
+        "currency": "$",
+        "price": 39
+    },
+      {
+        "id":3,
+        "img":"https://http2.mlstatic.com/D_NQ_NP_802463-MCO45336272726_032021-O.webp",
+        "title": "Standar Mouse Pad",
+        "currency": "$",
+        "price": 19
+    },
+    {
+        "id":4,
+        "img":"https://www.impacto.com.pe/storage/products/16045112742.jpg",
+        "title": "XL Mouse Pad",
+        "currency": "$",
+        "price": 29
+    }
+
+]
+
