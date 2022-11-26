@@ -1,6 +1,8 @@
 import  '../App.css'
+import TarjetaListComponents from '../Components/TarjetaListComponents';
 import TarjetaTotalPrice from '../Components/TarjetaTotalPrice';
 import { FaShoppingCart } from 'react-icons/fa';
+import dataRanking from '../Data/DataRanking.json'
 
 
 function PageNotFound(){
@@ -13,17 +15,21 @@ function PageNotFound(){
                 <button type="button " class="btn btn-light btn-lg mx-2">&#60;Back</button>
 
             </div>
-            <div className='row'>
-                <div className='col-md-4'>
+            <div className='row mt-4'>
+                <div className='col-md-2'>
                     <TarjetaTotalPrice></TarjetaTotalPrice>
                 </div>
 
-                <div className='col-md-4'>
-                    
+                <div className='col-md-7'>
+
                 </div>
 
-                <div className='col-md-4'>
-                    
+                <div className='col-md-3'>
+                {
+                    dataRanking.map(item => (
+                        <TarjetaListComponents  key={item.id} periferico={item}></TarjetaListComponents>
+                    ))
+                }
                 </div>
 
             </div>
