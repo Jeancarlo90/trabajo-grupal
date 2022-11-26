@@ -12,6 +12,7 @@ import PageNotFound from './Pages/PageNotFound';
 import Ranking from './Pages/Ranking';
 import Reviews from './Pages/Reviews';
 import Support from './Pages/Support';
+import Experts from './Pages/Experts';
 import NavBar from './Components/NavBar';
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/Ranking' element={<Ranking />}></Route>
         <Route path='/Reviews' element={<Reviews />}></Route>
         <Route path='/Support' element={<Support />}></Route>
+        <Route path='/Experts' element={<Experts />}></Route>
         <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
     </BrowserRouter>
