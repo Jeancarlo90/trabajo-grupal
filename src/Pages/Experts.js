@@ -23,7 +23,6 @@ function PageNotFound(){
 
                 <div className='col-md-7'>
                     <TabsComponents></TabsComponents>
-
                 </div>
 
                 <div className='col-md-3'>

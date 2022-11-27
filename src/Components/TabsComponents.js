@@ -1,6 +1,9 @@
 import  '../App.css'
-
-
+import ListBuild from '../Components/ListBuild';
+import dataRanking from '../Data/DataRanking.json'
+import dataGraphics from '../Data/DataGraphics.json'
+import dataProcessor from '../Data/DataProcessor.json'
+import dataMemory from '../Data/DataMemory.json'
 
 const TabsComponents = (props) => {
     return(
@@ -30,13 +33,55 @@ const TabsComponents = (props) => {
                 </li>
             </ul>
                 <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-graphics" role="tabpanel" aria-labelledby="pills-graphics-tab">TAB UNO</div>
-                <div class="tab-pane fade" id="pills-processor" role="tabpanel" aria-labelledby="pills-processor-tab"><p className='text-white'> HOLA</p></div>
-                <div class="tab-pane fade" id="pills-memory" role="tabpanel" aria-labelledby="pills-memory-tab">...</div>
-                <div class="tab-pane fade" id="pills-storage" role="tabpanel" aria-labelledby="pills-storage-tab">...</div>
-                <div class="tab-pane fade" id="pills-cooler" role="tabpanel" aria-labelledby="pills-cooler-tab">...</div>
-                <div class="tab-pane fade" id="pills-windows" role="tabpanel" aria-labelledby="pills-windows-tab">...</div>
-                <div class="tab-pane fade" id="pills-power" role="tabpanel" aria-labelledby="pills-power-tab">...</div>
+                <div class="tab-pane fade show active" id="pills-graphics" role="tabpanel" aria-labelledby="pills-graphics-tab">
+                {
+                    dataGraphics.map(item => (
+                        <ListBuild  key={item.id} periferico={item}></ListBuild>
+                    ))
+                }
+                </div>
+                <div class="tab-pane fade" id="pills-processor" role="tabpanel" aria-labelledby="pills-processor-tab">
+                    {
+                        dataProcessor.map(item => (
+                            <ListBuild  key={item.id} periferico={item}></ListBuild>
+                        ))
+                    }
+                </div>
+                <div class="tab-pane fade" id="pills-memory" role="tabpanel" aria-labelledby="pills-memory-tab">
+                    {
+                        dataMemory.map(item => (
+                            <ListBuild  key={item.id} periferico={item}></ListBuild>
+                        ))
+                    }
+                </div>
+                <div class="tab-pane fade" id="pills-storage" role="tabpanel" aria-labelledby="pills-storage-tab">
+                    {
+                        dataRanking.map(item => (
+                            <ListBuild  key={item.id} periferico={item}></ListBuild>
+                        ))
+                    }
+                </div>
+                <div class="tab-pane fade" id="pills-cooler" role="tabpanel" aria-labelledby="pills-cooler-tab">
+                    {
+                        dataRanking.map(item => (
+                            <ListBuild  key={item.id} periferico={item}></ListBuild>
+                        ))
+                    }
+                </div>
+                <div class="tab-pane fade" id="pills-windows" role="tabpanel" aria-labelledby="pills-windows-tab">
+                    {
+                        dataRanking.map(item => (
+                            <ListBuild  key={item.id} periferico={item}></ListBuild>
+                        ))
+                    }
+                </div>
+                <div class="tab-pane fade" id="pills-power" role="tabpanel" aria-labelledby="pills-power-tab">
+                    {
+                        dataRanking.map(item => (
+                            <ListBuild  key={item.id} periferico={item}></ListBuild>
+                        ))
+                    }
+                </div>
             </div>
         </main>
     )

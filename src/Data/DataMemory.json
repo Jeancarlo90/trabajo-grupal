@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "img":"https://www.profesionalreview.com/wp-content/uploads/2021/09/modulo-memoria-ram-ddr5.jpg",
+        "title": "DDR5",
+        "currency": "$",
+        "price": 500
+    },
+    {
+        "id":2,
+        "img":"https://m.media-amazon.com/images/I/61j3CTxnXVL._AC_SX450_.jpg",
+        "title": "DDR4",
+        "currency": "$",
+        "price": 400
+    },
+      {
+        "id":3,
+        "img":"https://http2.mlstatic.com/D_NQ_NP_878453-MPE47984202826_102021-O.webp",
+        "title": "DDR3",
+        "currency": "$",
+        "price": 300
+    },
+    {
+        "id":4,
+        "img":"https://pe.wiautomation.com/public/images/landing/anticipa/product/6ES76482AL600QA0.jpg",
+        "title": "DDR2",
+        "currency": "$",
+        "price": 200
+    }
+
+]
+

@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "img":"https://www.impacto.com.pe/storage/products/1611326900BX8070110100-1.jpg",
+        "title": "Intel Core i3-12100 4-Core",
+        "currency": "$",
+        "price": 136
+    },
+    {
+        "id":2,
+        "img":"https://www.impacto.com.pe/storage/products/1611326980BX8070110700-1.jpg",
+        "title": "Intel Core i7-12700 12-Core",
+        "currency": "$",
+        "price": 250
+    },
+      {
+        "id":3,
+        "img":"https://www.impacto.com.pe/storage/products/1612191476BX8070110400-2.jpg",
+        "title": "Intel Core i5-12400 6-Core",
+        "currency": "$",
+        "price": 170
+    },
+    {
+        "id":4,
+        "img":"https://m.media-amazon.com/images/I/41J0EFEAJDL._AC_SY355_.jpg",
+        "title": "AMD Ryzen 5 5600x 6-Core",
+        "currency": "$",
+        "price": 130
+    }
+
+]
+
