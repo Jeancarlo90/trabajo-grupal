@@ -1,6 +1,7 @@
 import  '../App.css'
 import TarjetaListComponents from '../Components/TarjetaListComponents';
 import TarjetaTotalPrice from '../Components/TarjetaTotalPrice';
+import TabsComponents from '../Components/TabsComponents';
 import { FaShoppingCart } from 'react-icons/fa';
 import dataRanking from '../Data/DataRanking.json'
 
@@ -21,6 +22,7 @@ function PageNotFound(){
                 </div>
 
                 <div className='col-md-7'>
+                    <TabsComponents></TabsComponents>
 
                 </div>
 
