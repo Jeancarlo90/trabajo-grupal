@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: white !important;
+  color: black !important;
+}
+
+.nav-pills .nav-link {
+  background: #DD2FEF !important;
+  color: white !important;
+}
