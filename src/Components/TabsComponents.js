@@ -1,11 +1,44 @@
 import  '../App.css'
+import React, { useEffect, useState } from "react"
 import ListBuild from '../Components/ListBuild';
 import dataRanking from '../Data/DataRanking.json'
-import dataGraphics from '../Data/DataGraphics.json'
 import dataProcessor from '../Data/DataProcessor.json'
-import dataMemory from '../Data/DataMemory.json'
+
+const BASE_URL = "https://backendtrabajo-production.up.railway.app"
 
 const TabsComponents = (props) => {
+    const [graphicsList, setGraphicsList] = useState([])
+    const [memoryList, setMemoryList] = useState([])
+    const [processorList, setProcessorList] = useState([])
+
+    const httpGetGraphicsAsyncAwait = async () => {
+        const resp = await fetch(
+            `${BASE_URL}/components?type=GRAPHICS`
+        )
+        const data = await resp.json()
+        setGraphicsList(data)
+    }
+    const httpGetMemoryAsyncAwait = async () => {
+        const resp = await fetch(
+            `${BASE_URL}/components?type=MEMORY`
+        )
+        const data = await resp.json()
+        setMemoryList(data)
+    }
+    const httpGetProcessorAsyncAwait = async () => {
+        const resp = await fetch(
+            `${BASE_URL}/components?type=PROCESSOR`
+        )
+        const data = await resp.json()
+        setProcessorList(data)
+    }
+
+    useEffect(() => {
+        httpGetGraphicsAsyncAwait()
+        httpGetMemoryAsyncAwait()
+        httpGetProcessorAsyncAwait()
+    }, [])
+
     return(
         <main>
             <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab" role="tablist">
@@ -35,7 +68,7 @@ const TabsComponents = (props) => {
                 <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-graphics" role="tabpanel" aria-labelledby="pills-graphics-tab">
                 {
-                    dataGraphics.map(item => (
+                    graphicsList.map(item => (
                         <ListBuild  key={item.id} periferico={item}></ListBuild>
                     ))
                 }
@@ -49,14 +82,14 @@ const TabsComponents = (props) => {
                 </div>
                 <div class="tab-pane fade" id="pills-memory" role="tabpanel" aria-labelledby="pills-memory-tab">
                     {
-                        dataMemory.map(item => (
+                        memoryList.map(item => (
                             <ListBuild  key={item.id} periferico={item}></ListBuild>
                         ))
                     }
                 </div>
                 <div class="tab-pane fade" id="pills-storage" role="tabpanel" aria-labelledby="pills-storage-tab">
                     {
-                        dataRanking.map(item => (
+                        processorList.map(item => (
                             <ListBuild  key={item.id} periferico={item}></ListBuild>
                         ))
                     }

@@ -6,7 +6,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import dataRanking from '../Data/DataRanking.json'
 
 
-function PageNotFound(){
+function Experts(){
     return(
     <main className='bg-dark h-100'>
         <div className='container'>
@@ -39,4 +39,4 @@ function PageNotFound(){
     )
 }
 
-export default PageNotFound;
+export default Experts;
