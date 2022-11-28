@@ -2,7 +2,6 @@ import  '../App.css'
 import React, { useEffect, useState } from "react"
 import ListBuild from '../Components/ListBuild';
 import dataRanking from '../Data/DataRanking.json'
-import dataProcessor from '../Data/DataProcessor.json'
 
 const BASE_URL = "https://backendtrabajo-production.up.railway.app"
 
