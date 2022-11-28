@@ -40,6 +40,12 @@ function NavBar(){
                                        Support
                                     </Link >
                                 </li>
+                                <li>
+                                    <Link to='/Experts' className="nav-link text-white">
+                                        
+                                       Experts
+                                    </Link >
+                                </li>
                             </ul>
                         </div>
                     </div>
