@@ -7,7 +7,7 @@ const TarjetaInfluencer = (props) => {
         <main>
             <div className='row rounded mx-5'>
                 <div className='row'>
-                <iframe width="560" height="315" src={props.tarjeta.urlVideo} title="YouTube video player" 
+                <iframe width="560" height="315" src={props.tarjeta.urlvideo} title="YouTube video player" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div className='row my-3'>
@@ -15,7 +15,7 @@ const TarjetaInfluencer = (props) => {
                 </div>
                 <div className='row'>
                     <div className='col-3'>
-                    <img src={props.tarjeta.urlLogo}
+                    <img src={props.tarjeta.urllogo}
                      alt="Imagen no encontrada" className="rounded-circle">
                         </img>
                     </div>
