@@ -75,7 +75,7 @@ const TabsComponents = (props) => {
                 </div>
                 <div class="tab-pane fade" id="pills-processor" role="tabpanel" aria-labelledby="pills-processor-tab">
                     {
-                        dataProcessor.map(item => (
+                        processorList.map(item => (
                             <ListBuild  key={item.id} periferico={item}></ListBuild>
                         ))
                     }
