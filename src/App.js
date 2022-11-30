@@ -15,6 +15,7 @@ import Support from './Pages/Support';
 import Experts from './Pages/Experts';
 import NavBar from './Components/NavBar';
 import SubmitTicket from './Pages/SubmitTicket';
+import History from './Pages/History';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/Support' element={<Support />}></Route>
         <Route path='/Experts' element={<Experts />}></Route>
         <Route path='/Submit' element={<SubmitTicket />}></Route>
+        <Route path='/History' element={<History />}></Route>
         <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
     </BrowserRouter>
