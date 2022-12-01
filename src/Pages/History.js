@@ -2,7 +2,7 @@ import  '../App.css'
 import React, { useEffect, useState } from "react"
 import TarjetaHistory from '../Components/TarjetaHistory';
 
-const BASE_URL = "http://localhost:4444";
+const BASE_URL = "https://backendtrabajo-production.up.railway.app";
 
 function History(){
     const [componentsList, setComponentsList] = useState([])
