@@ -49,7 +49,6 @@ function NavBar(){
                                     Request
                                     </Link >
                                 </li>
-
                                 <li>
                                     <Link to='/History' className="nav-link text-white">  
                                     History
