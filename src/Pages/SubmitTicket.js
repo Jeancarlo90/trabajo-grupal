@@ -2,22 +2,63 @@ import  '../App.css'
 import React, { useEffect, useState } from "react"
 import TarjetaRanking from '../Components/TarjetaRanking';
 
-const BASE_URL = "https://backendtrabajo-production.up.railway.app"
+const BASE_URL = "http://localhost:4444"
 
 function SubmitTicket(){
-    const [componentsList, setComponentsList] = useState([])
+    const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
+    const [phone, setPhone] = useState("")
+    const [subject, setSubject] = useState("")
+    const [description, setDescription] = useState("")
 
-    const httpGetComponentssAsyncAwait = async () => {
+    const httpObtenerRequest = async (user_id) => {
+        const resp = await fetch(`${BASE_URL}/request?user_id=${user_id}`)
+        const data = await resp.json();
+        console.log(data);
+    };
+
+    const httpGuardarRequest = async (
+        user_id, email, name, phone,subject,description
+    ) => {
+        const data = {
+            user_id,
+            email,
+            name,
+            phone,
+            subject,
+            description
+        }
+
         const resp = await fetch(
-            `${BASE_URL}/components/bestseller`
+            `${BASE_URL}/request`,
+            {
+                method : "POST",
+                body : JSON.stringify(data),
+                headers : {
+                    "Content-Type" : "application/json"
+                }
+            }
         )
-        const data = await resp.json()
-        setComponentsList(data)
-    }
+        const dataResp = await resp.json();
 
-    useEffect(() => {
-       // httpGetComponentssAsyncAwait()
-    }, [])
+        if (dataResp.error !== "") {
+            console.error(dataResp.error);
+        }else{
+            alert("Request guardado correctamente");
+        }
+
+        httpObtenerRequest(user_id);
+    };
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        //console.log(email, name, phone,subject,description);
+        
+        httpGuardarRequest(
+            "6c3ea494-7944-4e2c-a067-b56f2372efd1",
+            email, name, phone,subject,description
+        );
+    };
 
 
     return(
@@ -25,42 +66,42 @@ function SubmitTicket(){
             <div className='container w-100'>
                 <h3 className='text-light'> Submit a Request</h3>
                 <div className='row mt-5'>
-                    <div class=" bg-white mx-5 mb-4 p-4 rounded"  >
-                        <div class="row">
-                            <form class="formularioRegistro">
-                                <div class="row">
-                                    <div class="mb-3 col-12">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" class="form-control"></input>
+                    <div className=" bg-white mx-5 mb-4 p-4 rounded"  >
+                        <div className="row">
+                            <form onSubmit={handleSubmit} >
+                                <div className="row">
+                                    <div className="mb-3 col-12">
+                                        <label className="form-label">Email</label>
+                                        <input type="email" value={email} onChange={(evt) => { setEmail(evt.target.value)}}  className="form-control"></input>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="mb-3 col-12">
-                                        <label class="form-label">Name</label>
-                                        <input type="text" class="form-control"></input>
+                                <div className="row">
+                                    <div className="mb-3 col-12">
+                                        <label className="form-label">Name</label>
+                                        <input type="text" value={name} onChange={(evt) => { setName(evt.target.value)}} className="form-control"></input>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="mb-3 col-12">
-                                        <label class="form-label">Phone</label>
-                                        <input type="text" class="form-control"></input>
+                                <div className="row">
+                                    <div className="mb-3 col-12">
+                                        <label className="form-label">Phone</label>
+                                        <input type="text"  value={phone}  onChange={(evt) => { setPhone(evt.target.value)}} className="form-control"></input>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="mb-3 col-12">
-                                        <label class="form-label">Subject</label>
-                                        <input type="text" class="form-control"></input>
+                                <div className="row">
+                                    <div className="mb-3 col-12">
+                                        <label className="form-label">Subject</label>
+                                        <input type="text"  value={subject}  onChange={(evt) => { setSubject(evt.target.value)}} className="form-control"></input>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="mb-3 col-12">
-                                        <label class="form-label">Description</label>
-                                        <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                <div className="row">
+                                    <div className="mb-3 col-12">
+                                        <label className="form-label">Description</label>
+                                        <textarea className="form-control"  value={description}  onChange={(evt) => { setDescription(evt.target.value)}} name="" id="" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-3">
-                                        <button type="button" class="btn btn-primary border-0" style={{background:"#DD2FEF"}}>Submit</button>
+                                <div className="row">
+                                    <div className="col-3">
+                                        <button type="submit" className="btn btn-primary border-0" style={{background:"#DD2FEF"}}>Submit</button>
                                     </div>
                                 </div>
                             </form>
