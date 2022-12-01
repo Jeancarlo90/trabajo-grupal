@@ -36,14 +36,23 @@ function NavBar(){
                                 </li>
                                 <li>
                                     <Link to='/Support' className="nav-link text-white">
-                                        
                                        Support
                                     </Link >
                                 </li>
                                 <li>
-                                    <Link to='/Experts' className="nav-link text-white">
-                                        
+                                    <Link to='/Experts' className="nav-link text-white">  
                                        Experts
+                                    </Link >
+                                </li>
+                                <li>
+                                    <Link to='/Request' className="nav-link text-white">  
+                                    Request
+                                    </Link >
+                                </li>
+
+                                <li>
+                                    <Link to='/History' className="nav-link text-white">  
+                                    History
                                     </Link >
                                 </li>
                             </ul>

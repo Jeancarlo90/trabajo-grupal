@@ -2,7 +2,7 @@ import  '../App.css'
 import React, { useEffect, useState } from "react"
 import TarjetaRanking from '../Components/TarjetaRanking';
 
-const BASE_URL = "http://localhost:4444"
+const BASE_URL = "https://backendtrabajo-production.up.railway.app";
 
 function SubmitTicket(){
     const [email, setEmail] = useState("")

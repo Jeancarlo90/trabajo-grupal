@@ -29,7 +29,7 @@ function App() {
         <Route path='/Reviews' element={<Reviews />}></Route>
         <Route path='/Support' element={<Support />}></Route>
         <Route path='/Experts' element={<Experts />}></Route>
-        <Route path='/Submit' element={<SubmitTicket />}></Route>
+        <Route path='/Request' element={<SubmitTicket />}></Route>
         <Route path='/History' element={<History />}></Route>
         <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
