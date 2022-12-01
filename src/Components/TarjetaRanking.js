@@ -7,7 +7,7 @@ const TarjetaRanking = (props) => {
         <main>
             <div className='row rounded my-2 bg-light'>
                 <div className='col-2'>
-                <img src={props.periferico.img} class="rounded" style={{width:"75px", height:"75px"}} alt="...">
+                <img src={props.periferico.img} className="rounded" style={{width:"75px", height:"75px"}} alt="...">
                     </img>
                 </div>
                 <div className='col-8 d-flex align-items-center'>

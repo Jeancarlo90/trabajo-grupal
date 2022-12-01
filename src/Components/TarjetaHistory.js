@@ -6,18 +6,18 @@ const TarjetaHistory = (props) => {
     return(
         <main>
             <div className='row rounded my-2 bg-light'>
-                <div className='col-2'>
-                <img src={props.periferico.img} class="rounded" style={{width:"75px", height:"75px"}} alt="...">
+                <div className='col-2 my-1'>
+                <img src={props.periferico.img} className="rounded" style={{width:"75px", height:"75px"}} alt="...">
                     </img>
                 </div>
                 <div className='col-6 d-flex align-items-center'>
-                <h3 > {props.periferico.title}</h3>
+                <h5 > {props.periferico.title}</h5>
                 </div>
-                <div className='col-2 d-flex align-items-center'>
-                <h3 > {props.periferico.currency}{props.periferico.price}</h3>
+                <div className='col-1 d-flex align-items-center'>
+                <h5 > {props.periferico.currency}{props.periferico.price}</h5>
                 </div>
-                <div className='col-2 d-flex align-items-center'>
-                <h3 > {props.periferico.currency}{props.periferico.price}</h3>
+                <div className='col-3 d-flex align-items-center'>
+                <h5> {props.periferico.history.purchase_date}</h5>
                 </div>
             </div>
         </main>
